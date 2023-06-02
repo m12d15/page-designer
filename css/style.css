@@ -1,0 +1,342 @@
+body {
+    font-family: 'Lato', sans-serif;
+    --bgraund-color: #f6f6f6;
+    --text-secondary-color: #828282;
+    --text-color: #070707;
+    --backgraund-color: #828282;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    /*адаптивность картинок к размеру*/
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    /*Цвет ссылки черный, без подчеркивания*/
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 47px;
+}
+
+.container {
+    /*основной контейнер*/
+    max-width: 945px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.horizontal-direction {
+    /*горизонтальное расположение элементов в контейнере ".container"*/
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 10px;
+    gap: 10px;
+}
+
+.vertical-direction {
+    /*вертикальное расположение элементов в контейнере ".container"*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 10px;
+    gap: 10px;
+}
+
+.line {
+    /*Серая разделительная линия(+подчеркивание)*/
+    border-bottom: 2px solid var(--text-secondary-color);
+    padding-bottom: 30px;
+    padding-left: 0px;
+}
+
+.text-secondary-color {
+    /*серый цвет текста*/
+    color: var(--text-secondary-color);
+}
+
+.backgraund-color {
+    /*серый цвет фона*/
+    background-color: var(--bgraund-color);
+}
+
+.mobile-direction {
+    /*контейнер (мобильный) футер*/
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.indent {
+    /* класс отступов*/
+    text-align: center;
+    padding: 50px 0px 40px 0px;
+}
+
+.underline-black {
+    /*1.черный текст ссылки +серая анимация подчеркивания*/
+    color: #070707;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.underline-black:after {
+    /*1.1.черный текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-black:hover:after {
+    /*1.2.черный текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-grey {
+    /*1.серый текст ссылки +серая анимация подчеркивания*/
+    color: #828282;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.underline-grey:after {
+    /*1.1.серый текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+.underline-grey:hover:after {
+    /*1.2.серый текст ссылки +серая анимация подчеркивания*/
+    content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px;
+    background-color: #828282;
+    transition: width 0.5s;
+}
+
+
+.designer {
+    /*Отступы инф. текста (UX | UI designer 24 years old, Minsk)*/
+    margin: 60px 0px 0px 100px;
+}
+
+.language {
+    /*Перевернутые ссылки(RU | EN) для смены языка*/
+    display: flex;
+    transform: rotate(270deg);
+    margin: 50px 0px 0px 0px;
+}
+
+.hover-image-scale {
+    /*1. Анимация картинок "Портфолио" (приближение)*/
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.hover-image-scale img {
+    /*1.1. Анимация картинок "Портфолио" (приближение)*/
+    transition: 300ms;
+}
+
+.hover-image-scale img:hover {
+    /*1.2. Анимация картинок "Портфолио" (приближение)*/
+    transform: scale(1.05);
+}
+
+.footerbotton {
+    /*1.Кнопка в футере об отправке сообщения*/
+    color: #ffffff;
+    min-width: 130px;
+    padding: 15px 55px;
+    border-radius: 50px;
+    border: 2px solid #000000;
+    background: #000000;
+}
+
+.footerbotton:hover {
+    /*1.1.Кнопка в футере об отправке сообщения*/
+    color: #000000;
+    background: #ffffff;
+}
+
+.small-rotate {
+    /*1.Анимация картинки футера*/
+    transition: all 300ms ease;
+}
+
+.small-rotate:hover {
+    /*1.1.Анимация картинки футера*/
+    transform: rotate(20deg);
+}
+
+
+@media(max-width:550px) {
+    .header {
+        display: none;
+    }
+
+    .nav {
+        display: none;
+    }
+
+}
+
+/**/
+
+.header-mobile .header-row {
+    /*1.мобильный хеадер всплывающем окне меню*/
+    display: none;
+}
+
+.header-mobile .header-row {
+    /*1.1.мобильный хеадер всплывающем окне меню*/
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 10px 0px 10px;
+}
+
+.header-mobile h1 {
+    /*1.2.мобильный хеадер всплывающем окне меню*/
+    margin: 0;
+}
+
+.designer-mobile {
+    padding: 10px 10px 10px 10px;
+}
+
+.menu-btn {
+    /*мобильное меню (кнопка) хеадер*/
+    border: 0;
+    background: transparent;
+    padding: 0;
+    margin: 15px;
+}
+
+.menu-btn:hover {
+    /*курсор на кнопку мобильного меню*/
+    cursor: pointer;
+}
+
+/**/
+.hidden {
+    display: none !important;
+}
+
+.mobile-menu {
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    right: 0;
+    max-width: 375px;
+    min-height: 600px;
+    box-sizing: border-box;
+    padding: 40px 0px 50px 20px;
+    border: 1px solid black;
+    display: flex;
+    background: white;
+    justify-content: space-between;
+}
+
+.mobile-navigation {
+    /*навигация содержимого кнопки */
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 20px 0px;
+    margin: 0px;
+}
+
+.menu-left {
+    /* содержимое левой колонки мобильного меню*/
+    font-size: 25px;
+    font-weight: bold;
+    justify-content: space-between;
+}
+
+.menu-right {
+    /* содержимое правой колонки мобильного меню*/
+    font-size: 25px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mobile-menu .mobile-navigation {
+    flex-direction: column;
+    gap: 40px;
+    align-items: start;
+    padding: 0px;
+}
+
+
+
+@media(max-width:550px) {
+    .header-mobile {
+        display: block;
+    }
+
+    .header {
+        display: none;
+    }
+}
+
+@media(min-width:550px) {
+    .header-mobile {
+        display: none;
+    }
+}
+
+@media(max-width:360px) {
+    .photo {
+        display: none;
+    }
+}
+
+@media(min-width:360px) {
+    .photo-mobile {
+        display: none;
+    }
+}
